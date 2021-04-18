@@ -1,3 +1,21 @@
+void main(){
+  var dog = new Dog("Oscar", "Vote", "Male", 2, false);
+  dog.bark();
+  dog.eat (300);
+  int age= dog.getAge();
+  print (age);
+  bool favoriteDog = dog.isFavoritePet();
+  print (favoriteDog);
+  
+  var cat = new Cat ("Pinky", "Local", "Female", 2, true);
+    cat.meow();
+  cat.eat (350);
+  bool isFavoriteCat = cat.isFavoritePet();
+  
+  bool hasFavoritePet= dog.isFavoritePet() && cat.isFavoritePet();
+ 
+}
+
 class Dog {
   String name;
   String breed;
@@ -6,5 +24,62 @@ class Dog {
   bool isFavorite;
   
   
-  Dog (this.name, this.breed, this.gender, this.age, this.isFavorite);
+  Dog(this.name, this.breed, this.gender, this.age, this.isFavorite);
+  
+  
+  void bark(){
+    print ("Dog is barking");
+  }
+  
+   void eat(int foodweight){
+    if(foodweight>400){
+    print ("Dog is eating the food");
+    }else{
+      bark();
+      
+    }
+  }
+  
+  int getAge(){
+    return age;
+  }
+  
+  bool isFavoritePet(){
+    return isFavorite;
+  }
 }
+
+class Cat{
+  String name;
+  String breed;
+  String gender;
+  int age;
+  bool isFavorite;
+  
+  
+  Cat(this.name, this.breed, this.gender, this.age, this.isFavorite);
+  
+  
+  void meow(){
+    print ("Cat is meowing");
+  }
+  
+   void eat(int foodweight){
+    if(foodweight>300){
+    print ("Cat is eating the food");
+    }else{
+      meow();
+      
+    }
+  }
+  
+  int getAge(){
+    return age;
+  }
+  
+  bool isFavoritePet(){
+    return isFavorite;
+  }
+}
+
+
